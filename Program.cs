@@ -5,6 +5,7 @@
     {
         static void Main(string[] args)
         {
+
             //multicasting delegates ==> incase of void
             mathOperation d1 = add;
             mathOperation d2 = sub;
