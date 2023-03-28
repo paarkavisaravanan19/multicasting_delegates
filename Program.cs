@@ -7,21 +7,28 @@
         {
 
             //multicasting delegates ==> incase of void
-            mathOperation d1 = add;
-            mathOperation d2 = sub;
-            mathOperation d3 = mult;
-            mathOperation d5= d1+d2+d3;
+            //mathOperation d1 = add;
+            //mathOperation d2 = sub;
+            //mathOperation d3 = mult;
+            //mathOperation d5= d1+d2+d3;
 
-            Delegate[] arr=d5.GetInvocationList();  
-            d5.Invoke(2, 3);
+            //Delegate[] arr=d5.GetInvocationList();  
+            //d5.Invoke(2, 3);
+
+            //anonymous or inline delegate invokation
+            mathOperation del = delegate (int a, int b)
+            {
+                Console.WriteLine(a + b);
+            };
+            del.Invoke(10, 20);
 
         }
 
-        public static void add(int a, int b)
+        /*public static void  add(int a, int b)
         {
             Console.WriteLine(a + b);
 
-        }
+        }*/
         public static void sub(int a, int b)
         {
             Console.WriteLine(a - b);
